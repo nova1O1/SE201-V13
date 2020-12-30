@@ -17,5 +17,17 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
     }
+
+    public static String convertCyrilic(String message){
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < message.length(); i++) {
+            for (int x = 0; x < abcCyr.length; x++ ) {
+                if (message.charAt(i) == abcCyr[x]) {
+                    builder.append(abcLat[x]);
+                }
+            }
+        }
+        return builder.toString();
+    }
     
 }
